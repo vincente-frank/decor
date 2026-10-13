@@ -263,7 +263,7 @@ const Home = () => {
         </section>
 
         {/* thrilled to help you section */}
-        <section className='h-auto bg-[url("morph-bg.webp")] bg-cover
+        <section className='h-auto bg-[url("/morph-bg.webp")] bg-cover
         bg-center md:bg-fixed relative p-6'>
             <div className='absolute inset-0  bg-gradient-to-b
             from-black via-transparent to-black'></div>
@@ -276,7 +276,7 @@ const Home = () => {
 
         {/* contact form section */}
         <section id = "contacts"
-        className='bg-[url("driven.webp")] bg-cover bg-center
+        className='bg-[url("/driven.webp")] bg-cover bg-center
         h-screen p-6 relative' >
             <div className='absolute inset-0 bg-gradient-to-b from-black
             via-transparent to-transparent backdrop-blur-3xl'></div>
