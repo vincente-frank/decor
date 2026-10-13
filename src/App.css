@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lavishly+Yours&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Italianno&family=Lavishly+Yours&family=Zen+Dots&display=swap');
+@import "tailwindcss";
+
+
+
+
+/* me custom fonts */
+@theme{
+  --font-lavish:"Lavishly Yours", san-serif;
+  --font-zen:"Zen Dots", san-serif;
+  --font-italiano:"Italianno", san-serif;
+}
+
+.embossed-text {
+  text-shadow: 4px 4px 4px burlywood, 4px 4px 4px burlywood;
+  color: black;
+}
