@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss()
   ],
   // adding the servers
-  // server: {
-  //   allowedHosts: ['climate-anime-pulse.ngrok-free.dev'],
-  // },
+  server: {
+    allowedHosts: ['climate-anime-pulse.ngrok-free.dev'],
+  },
 })

@@ -15,9 +15,9 @@ const App = () => {
     })
   }, [])
 
-  // if(loading) {
-  //   return <SplashScreen/>
-  // }
+  if(loading) {
+    return <SplashScreen/>
+  }
 
   return (
 
