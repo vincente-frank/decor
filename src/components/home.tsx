@@ -3,12 +3,16 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import TextPlugin from 'gsap/TextPlugin'
-import { MailIcon, PhoneCall } from 'lucide-react'
+import { MailIcon, PhoneCall, PlusCircle, XCircle } from 'lucide-react'
+import { useState } from 'react'
+import { Pillars } from '../utils/pillars'
 
 
 const Home = () => {
 
     gsap.registerPlugin(SplitText, TextPlugin, ScrollTrigger)
+
+    const [activePillar, setActivePillar] = useState<number | null>(null)
 
     useGSAP ( ()=> {
 
@@ -113,31 +117,66 @@ const Home = () => {
             </div>
         </section>
 
-        {/* after hero section */}
-        <section className='p-6 min-h-screen text-black bg-gradient-to-b from-white
-        to-transparent h-auto parent1'>
-            {/* the after hero heading section */}
-            <p className='font-zen tracking-widest text-[2rem] uppercase
-            leading-[3rem] pt-16 pb-4 '>
-                Lorem ipsum dolor sit amet consectet adipisicing elit.
+        {/* good design section */}
+        <section className="min-h-screen h-auto p-6 bg-white flex
+        flex-col items-start justify-center gap-y-8 md:flex-row md:justify-between ">
+            {/* the philosophy */}
+            <div className='w-full md:w-[40%]'>
+                <p className="font-zen tracking-widest font-black
+                py-3 md:text-xl/8 capitalize " >
+                [ 01 / our philosophy ]
             </p>
-            {/* the image content div container */}
-            <div className='relative bg-[url("/scatter.webp")] bg-cover bg-center
-            h-[40rem] my-4 rounded '>
-                {/* the top gradient overlay */}
-                <div className='absolute inset-0 bg-gradient-to-b from-white
-                to-black/40 rounded  '></div>
-                {/* the conten */}
-                <div className='relative '>
-                    <p className='font-black tracking-wide font-mono
-                    uppercase text-xl/8 p-6 absolute top-6 left-0
-                    '>Lorem, ipsum dolor.</p>
-                    <p className='absolute top-[29rem] right-0 px-6 font-lavish
-                    text-4xl font-black tracking-widest capitalize
-                    text-[burlywood] saturate-200'>Lorem, ipsum.</p>
-                    <p className='absolute top-[32rem] right-0 px-6 pt-3
-                    text-right text-lg/8 text-white font-zen'>
-                        Lorem ipsum dolor sit <br /> amet consectetur elit <br /> adipisicing elit.
+            <p className='font-mono capitalize py-3 text-xl/8 text-black/60'>
+                every detail is decided, not decorated. <br/>
+                fewer elements, each one deliberate.
+            </p>
+            </div>
+            {/* good design div */}
+            <div className='w-full md:w-[60%]'>
+                <p className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
+                tracking-[.2rem] bg-clip-text saturate-200 text-transparent
+                bg-gradient-to-t from-[burlywood] to-black md:pl-[12rem] text-[24px]
+                leading-[2.5rem] '>
+                    good design <br/> communicates. <br/>
+                    great spaces <br/> surprise.
+                </p>
+                <p className='font-mono text-[16px] leading-[2rem] '
+                >
+                    A luxury residence works when every interaction is 
+                    choreographed with silence. The home is not a 
+                    showroom catalogue; It is an intimate perspective 
+                    held in motion. Form. texture, and lighgting must be 
+                    unified as a single work of art.
+                </p>
+            </div>
+        </section>
+
+        {/* elevation section */}
+        <section className='min-h-screen h-auto p-6'>
+            {/* container div */}
+            <div className='relative bg-[url("/scatter.webp")] bg-cover h-[35rem]
+            bg-center rounded-[1rem] md:h-screen'>
+                {/* the overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black
+                to-transparent rounded-[1rem] border border-2 border-white/40'></div>
+                {/* the content */}
+                <div className='relative'>
+                    {/* scatter suite */}
+                    <h1 className='absolute font-zen font-black text-[black] bg-white/20
+                    inline-block px-2 py-1 top-8 left-6 rounded-[.5rem] saturate-200
+                    backdrop-blur-xl border border-2 border-white/60 uppercase
+                    tracking-[.2rem] text-[12px] md:text-lg
+                    '>scatter suite</h1>
+                    {/* natural light */}
+                    <h1 className='absolute top-[22rem] right-0 text-left text-[burlywood]
+                    font-zen px-6 text-[14px] leading-[2rem] py-3 md:text-lg/8
+                    md:top-[26rem] md:uppercase md:tracking-[.2rem  '
+                    >organic harmony & natural light</h1>
+                    <p className='absolute top-[26rem] text-white/60 text-left right-0
+                    px-6 py-3 md:top-[29rem] md:text-2xl md:tracking-[.2rem]
+                    md:pl-[12rem] md:text-right md:leading-[2.5rem] md:py-4 '>
+                        Crafted with brusged travertine and aged oak timber,
+                        creating a contemplative shelter away from urban noise.
                     </p>
                 </div>
             </div>
@@ -146,18 +185,22 @@ const Home = () => {
         {/* about us section */}
         <section className=' p-6 min-h-screen h-auto bg-white about-us'>
             {/* the heading */}
-            <p className='uppercase font-zen tracking-widest text-[2rem]
-            leading-[2.2rem] py-3'> the heading</p>
-            <p className='text-lg/8 font-mono pb-8 md:pr-[12rem]
-            about-description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Earum natus consequatur a voluptates cumque, mollitia soluta!
-            </p>
+            <p className="font-zen tracking-widest font-black
+            py-3 md:text-xl/8 capitalize"
+            > [02 / method] </p>
+            <h1 className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
+            tracking-[.2rem] bg-clip-text saturate-200 text-transparent
+            bg-gradient-to-t from-[burlywood] to-black text-[24px]
+            leading-[2.5rem] '
+            > why our builds </h1>
+            <p className='font-mono text-[16px] leading-[2rem] uppercase
+            tracking-[.1rem] '
+            > three pillars of architectural excellence </p>
             {/* flexed container */}
             <div className='pt-12 grid items-start grid-cols-1 md:grid-cols-2
             gap-x-40'>
                 {/* image container */}
-                <div className='bg-[url("/bedroom.webp")] bg-cover bg-fixed
+                <div className='bg-[url("/bedroom.webp")] bg-cover md:bg-fixed
                 h-[30rem] rounded py-6 bg-left md:bg-center relative'>
                     {/* the white overlay ie top */}
                     <div className='absolute inset-0 bg-gradient-to-b from-white
@@ -174,34 +217,55 @@ const Home = () => {
                 </div>
                 {/* text container */}
                 <div className='pt-12 our'>
-                    <p className='text-[burlywood] saturate-200 font-black tracking-widest
-                     font-lavish text-[4rem] leading-[4.3rem] py-4 '>why our builds</p>
-                    <p className='font-mono text-lg/8 py-2 builds'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptates voluptatem incidunt repellendus numquam tempore? Optio, ipsa.
-                    </p>
-                    <p className='font-mono text-lg/8 py-2 builds'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptates voluptatem incidunt repellendus numquam tempore? Optio, ipsa.
-                    </p>
-                    <p className='font-mono text-lg/8 py-2 builds'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptates voluptatem incidunt repellendus numquam.
-                    </p>
-                    <a href="#" className='bg-[burlywood] text-[white] px-2 py-1 saturate-200
-                    capitalize font-zen tracking-widest rounded reach'> reach out</a>
+                    {/* let map throught the three pillars */}
+                    { Pillars.map( (pillar, index) => (
+                        <div key={pillar.id}>
+                            {/* head title */}
+                            <div className='flex items-center justify-between'>
+                                <div className='flex items-center gap-x-3 font-zen py-3
+                                md:py-6 '>
+                                    <span className=' font-black text-[burlywood] saturate-200 '
+                                    >0{index+1}.</span>
+                                    <h2 className='md:uppercase md:text-xl text-black/70'
+                                    >{pillar.head}</h2>
+                                </div>
+                                {/* icon changing logic */}
+                                <div>
+                                    {activePillar === index ? (
+                                        <XCircle onClick={ ()=> {setActivePillar(null);}}
+                                        className='cursor-pointer'
+                                        />
+                                    ) : (
+                                        <PlusCircle onClick={ ()=> {setActivePillar(index);}}
+                                        className='cursor-pointer'
+                                        />
+                                    ) }
+                                </div>
+                            </div>
+                            {/* the content */}
+                            <div>
+                                {activePillar === index && (
+                                    <p className='font-mono text-[16px] leading-[2rem] py-4 '
+                                    > {pillar.content} </p>
+                                )}
+                            </div>
+                        </div>
+                    )) }
+                    <a href="#contacts" className='bg-[burlywood] text-[white] px-2 py-1 saturate-200
+                    capitalize font-zen tracking-widest rounded reach hidden md:inline-block
+                     '> reach out</a>
                 </div>
             </div>
         </section>
 
         {/* furniture section */}
         <section className='bg-[url("/driven.webp")] min-h-screen h-auto
-        bg-cover bg-center bg-fixed relative furniture'>
+        bg-cover bg-center bg-fixed relative furniture saturate-200'>
             {/* the overlay */}
             <div className='absolute inset-0 bg-gradient-to-b from-white
             via-white/30 to-black'></div>
             {/* the content */}
-            <div className='relative pt-40 flex flex-col items-center justify-center
+            <div className='relative pt-42 flex flex-col items-center justify-center
             gap-y-12 md:pt-56 '>
                 <p className='font-lavish text-[3rem] leading-[4.4rem] md:text-[4rem]
                 tracking-widest text-center text-[burlywood] saturate-200
@@ -219,103 +283,195 @@ const Home = () => {
             </div>
         </section>
 
-        {/* gallery section */}
-        <section className='min-h-screen h-auto bg-black text-white p-6
-        grid grid-cols-1 md:grid-cols-12 gap-y-18 md:gap-x-16'>
-            {/* left contnet div */}
-            <div className=' pt-6 md:col-span-4 md:pt-[13rem]'>
-                <p className='font-italiano text-[transparent] text-[4rem]
-                font-bold bg-clip-text bg-gradient-to-r from-[burlywood] tracking-widest
-                bg-cover bg-center to-[white] '>Minister of enjoyment</p>
-                <p className='font-mono pt-3 pb-8 text-lg/8'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam repellendus non pariatur, tenetur laudantium aliquam natus.
-                </p>
-                <a href="#contacts" className='bg-[burlywood] text-[white] px-2 py-1 saturate-200
-                capitalize font-zen tracking-widest rounded
-                '> reach out</a>
-            </div>
-            {/* right images div */}
-            <div className='md:col-span-8 grid grid-cols-1 md:grid-cols-3'>
-                {/* bedroom */}
-                <img src="/bedroom.webp" alt=""
-                className='w-[40rem] h-[20rem] object-cover md:col-span-2
-                cursor-pointer '
-                />
-                {/* driven */}
-                <img src="/driven.webp" alt=""
-                className='w-[40rem] h-[20rem] object-cover cursor-pointer'
-                />
+        {/* selected works section */}
+        <section className='min-h-screen h-auto px-6 bg-black text-white
+        pt-6 pb-12 '>
+            {/* headings */}
+            <p className="font-zen tracking-widest font-black
+            py-3 md:text-xl/8 capitalize "
+            > [03 / portfolio ] </p>
+            <h1 className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
+            tracking-[.2rem] bg-clip-text saturate-200 text-transparent
+            bg-gradient-to-t from-[burlywood] to-white/90 text-[24px]
+            leading-[2.5rem] '
+            >selected works</h1>
+            <p className='font-mono text-[16px] leading-[2rem] uppercase
+            tracking-[.1rem] '
+            > explore the physical editions </p>
+            {/* container div */}
+            <div className='pt-12 grid grid-cols-1 items-center
+            justify-center md:grid-cols-3 gap-6'>
                 {/* living */}
-                <img src="/living.webp" alt=""
-                className='w-[40rem] h-[20rem] object-cover cursor-pointer '
-                />
-                
-                {/* scatter */}
-                <img src="/scatter.webp" alt=""
-                className='w-[40rem] h-[20rem] object-cover cursor-pointer'
-                />
+                <div className='h-[30rem] bg-[url("/living.webp")] rounded-[1rem]
+                bg-cover bg-center relative md:col-span-2 cursor-pointer'>
+                    {/* overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/80'></div>
+                    {/* the content */}
+                    <div className='relative'>
+                        <h3 className='absolute top-[22rem] left-6 font-lavish tracking-[.1rem]
+                        font-black text-[burlywood] capitalize saturate-200 py-3 text-[40px] '>01 / suite</h3>
+                        <p className='absolute top-[27rem] left-6 uppercase font-zen tracking-[.2rem]
+                         '>salon de lumiere</p>
+                    </div>
+                </div>
+                {/* bedroom */}
+                <div className='h-[30rem] bg-[url("/bedroom.webp")] rounded-[1rem]
+                bg-cover bg-center relative cursor-pointer '>
+                    {/* overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/80'></div>
+                    {/* the content */}
+                    <div className='relative'>
+                        <h3 className='absolute top-[22rem] left-6 font-lavish tracking-[.1rem]
+                        font-black text-[burlywood] capitalize saturate-200 py-3 text-[40px] '>02 / bedroom</h3>
+                        <p className='absolute top-[26rem] left-6 uppercase font-zen tracking-[.2rem]
+                        py-3 '>the obsidian master</p>
+                    </div>
+                </div>
                 {/* kitchen */}
-                <img src="/kitchen.webp" alt=""
-                className='w-[40rem] h-[20rem] object-cover cursor-pointer '
-                />
+                <div className='h-[30rem] bg-[url("/kitchen.webp")] rounded-[1rem]
+                bg-cover bg-center relative cursor-pointer '>
+                    {/* overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/80'></div>
+                    {/* the content */}
+                    <div className='relative'>
+                        <h3 className='absolute top-[22rem] left-6 font-lavish tracking-[.1rem]
+                        font-black text-[burlywood] capitalize saturate-200 py-3 text-[40px] '>03 / cuisine</h3>
+                        <p className='absolute top-[27rem] left-6 uppercase font-zen tracking-[.2rem]
+                         '>travertine cuisine</p>
+                    </div>
+                </div>
+                {/* hero */}
+                <div className='h-[30rem] bg-[url("/hero.webp")] rounded-[1rem]
+                bg-cover bg-center relative cursor-pointer '>
+                    {/* overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/80'></div>
+                    {/* the content */}
+                    <div className='relative'>
+                        <h3 className='absolute top-[22rem] left-6 font-lavish tracking-[.1rem]
+                        font-black text-[burlywood] capitalize saturate-200 py-3 text-[40px] '>04 / villa</h3>
+                        <p className='absolute top-[27rem] left-6 uppercase font-zen tracking-[.2rem]
+                         '>the monochrome</p>
+                    </div>
+                </div>
+                {/* driven */}
+                <div className='h-[30rem] bg-[url("/driven.webp")] rounded-[1rem]
+                bg-cover bg-center relative cursor-pointer '>
+                    {/* overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/80'></div>
+                    {/* the content */}
+                    <div className='relative'>
+                        <h3 className='absolute top-[22rem] left-6 font-lavish tracking-[.1rem]
+                        font-black text-[burlywood] capitalize saturate-200 py-3 text-[40px] '>05 / residence</h3>
+                        <p className='absolute top-[27rem] left-6 uppercase font-zen tracking-[.2rem]
+                         '>terracotta atelier</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         {/* thrilled to help you section */}
-        <section className='h-auto bg-[url("/morph-bg.webp")] bg-cover
-        bg-center md:bg-fixed relative p-6'>
+        <section className='min-h-screen h-auto bg-[url("/morph-bg.webp")] bg-cover
+        bg-center relative p-6 '>
             <div className='absolute inset-0  bg-gradient-to-b
-            from-black via-transparent to-black'></div>
-            <div className='relative text-white text-center py-6 h-96'>
-                "<h1 className='font-zen capitalize font-black tracking-widest
-                text-[3rem] py-6 text-[wheat] saturate-200 '
-                >always thrilled to help you</h1>"
+            from-black via-black/30 to-black'></div>
+            <div className='h-auto relative text-white text-center py-6 h-96'>
+                <p className='font-mono tracking-[.3rem] uppercase text-[burlywood]
+                py-6 '
+                >patron commitment</p>
+                {/* display in smaller devices */}
+                <h1 className='font-zen capitalize font-black tracking-widest
+                text-[2rem] py-6 text-[wheat] saturate-200 md:hidden inline-block '
+                >" <br />always thrilled to create with you <br /> "
+                </h1>
+                {/* display in medium devices */}
+                <h1 className='font-zen capitalize font-black tracking-widest
+                text-[3rem] py-6 text-[wheat] saturate-200 hidden md:inline-block '
+                >" <br />always thrilled <br /> to create with <br /> you <br /> "
+                </h1>
+                <p className='text-white/40 font-mono md:px-[12rem] pb-6 '>
+                    From initial conceptual drawings to finishing textiles,
+                    your sanctuary is guarded with uncompromising precision.
+                </p>
             </div>
         </section>
 
         {/* contact form section */}
         <section id = "contacts"
         className='bg-[url("/driven.webp")] bg-cover bg-center
-        h-screen p-6 relative' >
+        min-h-screen h-auto p-6 relative' >
             <div className='absolute inset-0 bg-gradient-to-b from-black
             via-transparent to-transparent backdrop-blur-3xl'></div>
-            <div className='relative text-white text-center pt-24'>
-                <p className='font-lavish text-[3rem] leading-[3rem]
-                tracking-widest py-3 '>Lorem, ipsum dolor.</p>
-                <p className='text-lg/8 font-mono pt-2 pb-6'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Dicta maxime nobis nihil?
-                </p>
-                {/* the form */}
-                <form action="#">
-                    {/* name */}
-                    <input type="text" placeholder='andika jina lako hapa'
-                    className='bg-transparent w-full my-3 px-2 py-1 placeholder:text-[wheat]
-                    font-mono placeholder:capitalize text-lg/8 tracking-widest
-                    outline-none border-b border-[wheat] rounded md:w-[60%]
-                    inline-block '
-                    />
+            <div className='relative text-white text-left pt-24 grid
+            grid-cols-1 md:grid-cols-2 items-center justify-centert'>
+                {/* start from scratch div */}
+                <div>
+                    <p className="font-zen tracking-widest font-black
+                    py-3 md:text-xl/8 capitalize "
+                    > [04 / contact] </p>
+                    <h1 className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
+                    tracking-[.2rem] bg-clip-text saturate-200 text-transparent
+                    bg-gradient-to-t from-[burlywood] to-white/90 text-[24px]
+                    leading-[2.5rem] '
+                    >
+                        <span>let's start</span>
+                        <span>from scratch</span>
+                    </h1>
+                    <p className='font-mono text-[16px] leading-[2rem] lowercase
+                    tracking-[.1rem] pb-4 '>
+                        Whether you are acquiring a new estate or renovating
+                        a historical apartment, reach out to start the
+                        architectural dialogue.
+                    </p>
                     {/* email */}
-                    <input type="text" placeholder='andika barua pepe hapa'
-                    className='bg-transparent w-full my-3 px-2 py-1 placeholder:text-[wheat]
-                    font-mono placeholder:capitalize text-lg/8 tracking-widest
-                    outline-none border-b border-[wheat] rounded md:w-[60%]
-                    inline-block '
-                    />
-                    {/* message text area */}
-                    <textarea  placeholder='andika jumbe yako hapa'
-                    cols={8} rows={4}
-                    className='bg-transparent w-full my-3 px-2 py-1 placeholder:text-[wheat]
-                    font-mono placeholder:capitalize text-lg/8 tracking-widest
-                    outline-none border-b border-[wheat] rounded md:w-[60%]
-                    inline-block '
-                    />
-                    <button className='capitalize font-zen  bg-[transparent] px-2 py-1
-                    mt-4 rounded tracking-widest outline outline-[wheat] cursor-pointer
-                    block md:ml-[44%] md:mr-[43%] '
-                    >tuma ujumbe</button>
-                </form>
+                    <div className='flex items-center justify-start gap-x-2 py-2
+                    px-2 py-1 '>
+                        <MailIcon className='size-4'/>
+                        <p>hello@deisahomes.com</p>
+                    </div>
+                    {/* phone number */}
+                    <div className='flex items-center justify-start gap-x-2 py-2'>
+                        <PhoneCall className='size-4'/>
+                        <p>+255 766 355 608</p>
+                    </div>
+                </div>
+                {/* send message form */}
+                <div className='mt-12 pt-6 bg-black/70 px-3 rounded-[1rem]
+                border border-white/30'>
+                    <form action="#">
+                        {/* name */}
+                        <label htmlFor="name"
+                        className='font-mono uppercase flex flex-col gap-y-3 py-3 border-b
+                        border-white/70'
+                        >your name / jina lako
+                            <input type="text" placeholder='Frank Vincent'
+                            className='outline-none border-none placeholder:text-white/70
+                            px-2 py-1 '
+                            />
+                        </label>
+                        {/* email */}
+                        <label htmlFor="email"
+                        className='font-mono uppercase flex flex-col gap-y-3 pt-8 border-b
+                        border-white/70'
+                        >email address / barua pepe
+                            <input type="email" placeholder='franknjolowelo@gmail.com' 
+                            className='outline-none border-none placeholder:text-white/70
+                            px-2 py-1 '
+                            />
+                        </label>
+                        {/* message */}
+                        <div>
+                            <p className='font-mono uppercase pt-8'> project specifications / jumbe</p>
+                            <textarea name="message" id="message" cols={8} rows={5}
+                            placeholder='Tell us about the property, square meters, location, and aesthetic expectations...'
+                            className='border-b border-white/70 w-full px-2 py-1 '
+                            />
+                        </div>
+                        {/* send button */}
+                        <button className='mt-4 bg-white text-black px-2 py-1 mb-3
+                        rounded-[.7rem] font-black font-mono capitalize '
+                        >send message / tuma jumbe</button>
+                    </form>
+                </div>
             </div>
         </section>
 
