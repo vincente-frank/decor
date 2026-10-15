@@ -90,10 +90,10 @@ const Home = () => {
         <section className='bg-[url("/hero.webp")] bg-cover bg-center
         bg-fixed min-h-screen h-auto hero relative p-6 hero ' >
             {/* the overlay */}
-            <div className='absolute inset-0 bg-gradient-to-b from-black/30
-            via-black/30 to-white hero'></div>
+            <div className='absolute inset-0 bg-gradient-to-b from-white
+            via-black/40 to-white hero'></div>
             {/* the content */}
-            <div className='hero-div relative pt-24 text-left'>
+            <div className='hero-div relative pt-12 text-left md:pt-32'>
                 {/* the heading */}
                 <h1 className='font-lavish text-[5rem] lowercase tracking-widest
                 leading-[4.5rem] text-[wheat] saturate-200 pb-4 font-bold '>
@@ -101,10 +101,12 @@ const Home = () => {
                     <span className='inline-block pl-8 homes'>homes</span>
                 </h1>
                 {/* the description or sub headlines */}
-                <p className='text-xl/8 font-zen leading-[2.5rem] text-white
-                saturate-200 tracking-[.2rem] pb-18 description '>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Minima deleniti sequi nostrum laborum animi voluptates quod!
+                <p className='text-xl font-mono leading-[2rem] text-white md:pt-4
+                saturate-200 tracking-[.18rem] pb-10 description md:pr-[36rem]
+                md:pb-12 '>
+                    Augmented spatial design and bespoke architectural curation
+                    for patrons who refude the generic. Where French precision
+                    meets handcrafted warmth.
                 </p>
                 {/* call to action buttons div container */}
                 <div className='flex items-center justify-start gap-x-12'>
@@ -121,7 +123,7 @@ const Home = () => {
         <section className="min-h-screen h-auto p-6 bg-white flex
         flex-col items-start justify-center gap-y-8 md:flex-row md:justify-between ">
             {/* the philosophy */}
-            <div className='w-full md:w-[40%]'>
+            <div className='w-full md:w-[40%] pt-16 '>
                 <p className="font-zen tracking-widest font-black
                 py-3 md:text-xl/8 capitalize " >
                 [ 01 / our philosophy ]
@@ -132,7 +134,7 @@ const Home = () => {
             </p>
             </div>
             {/* good design div */}
-            <div className='w-full md:w-[60%]'>
+            <div className='w-full md:w-[60%] md:pt-24'>
                 <p className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
                 tracking-[.2rem] bg-clip-text saturate-200 text-transparent
                 bg-gradient-to-t from-[burlywood] to-black md:pl-[12rem] text-[24px]
@@ -140,7 +142,7 @@ const Home = () => {
                     good design <br/> communicates. <br/>
                     great spaces <br/> surprise.
                 </p>
-                <p className='font-mono text-[16px] leading-[2rem] '
+                <p className='font-mono text-[16px] leading-[2rem] md:pl-[12rem] '
                 >
                     A luxury residence works when every interaction is 
                     choreographed with silence. The home is not a 
@@ -398,9 +400,9 @@ const Home = () => {
         {/* contact form section */}
         <section id = "contacts"
         className='bg-[url("/driven.webp")] bg-cover bg-center
-        min-h-screen h-auto p-6 relative' >
+        min-h-screen h-auto px-6 pt-6 pb-32 relative' >
             <div className='absolute inset-0 bg-gradient-to-b from-black
-            via-transparent to-transparent backdrop-blur-3xl'></div>
+            via-transparent to-black/80 backdrop-blur-3xl'></div>
             <div className='relative text-white text-left pt-24 grid
             grid-cols-1 md:grid-cols-2 items-center justify-centert'>
                 {/* start from scratch div */}
@@ -443,7 +445,7 @@ const Home = () => {
                         className='font-mono uppercase flex flex-col gap-y-3 py-3 border-b
                         border-white/70'
                         >your name / jina lako
-                            <input type="text" placeholder='Frank Vincent'
+                            <input type="text" placeholder='Frank Vincent' required
                             className='outline-none border-none placeholder:text-white/70
                             px-2 py-1 '
                             />
@@ -453,7 +455,7 @@ const Home = () => {
                         className='font-mono uppercase flex flex-col gap-y-3 pt-8 border-b
                         border-white/70'
                         >email address / barua pepe
-                            <input type="email" placeholder='franknjolowelo@gmail.com' 
+                            <input type="email" placeholder='franknjolowelo@gmail.com' required
                             className='outline-none border-none placeholder:text-white/70
                             px-2 py-1 '
                             />
@@ -461,14 +463,14 @@ const Home = () => {
                         {/* message */}
                         <div>
                             <p className='font-mono uppercase pt-8'> project specifications / jumbe</p>
-                            <textarea name="message" id="message" cols={8} rows={5}
+                            <textarea name="message" id="message" cols={8} rows={5} required
                             placeholder='Tell us about the property, square meters, location, and aesthetic expectations...'
                             className='border-b border-white/70 w-full px-2 py-1 '
                             />
                         </div>
                         {/* send button */}
-                        <button className='mt-4 bg-white text-black px-2 py-1 mb-3
-                        rounded-[.7rem] font-black font-mono capitalize '
+                        <button className='mt-4 bg-white text-black px-2 py-1 mb-6
+                        rounded-[.5rem] font-black font-mono capitalize cursor-pointer '
                         >send message / tuma jumbe</button>
                     </form>
                 </div>
@@ -476,50 +478,86 @@ const Home = () => {
         </section>
 
         {/* footer section */}
-        <section className='h-auto bg-black text-[white] p-6'>
-            {/*the container */}
-            <div className='flex flex-col justify-between items-start gap-y-6
-            md:flex-row pt-16'>
-                <h1 className='text-[3rem] tracking-widest font-zen leading-[3.8rem]
-                capitalize py-8 md:w-[40%] md:text-[5rem] md:leading-[5.2rem] '
-                >
-                    <span className='inline-block'>let's decorate</span>
-                    <span className='inline-block text-[2.6rem] bg-clip-text
-                    text-transparent bg-gradient-to-t from-[burlywood] md:text-[4rem]
-                     '>&nbsp;together!</span>
-                </h1>
-                {/* contacts */}
-                <div className='grid grid-cols-1 gap-y-2 md:pt-8 md:w-[40%]
-                md:pl-[16rem] pb-3 '>
-                    <a href="#" className='capitalize font-mono text-lg/8 md:text-[1.1rem]
-                    md:py-2 '
-                    >instagram</a>
-                    <a href="#" className='capitalize font-mono text-lg/8 md:text-[1.1rem]
-                    md:py-0 '
-                    >YouTube</a>
-                    <a href="#" className='capitalize font-mono text-lg/8 md:text-[1.1rem]
-                    md:py-0 '
-                    >whatsApp</a>
-                    {/* email */}
-                    <div className='flex items-center gap-x-2 py-2 cursor-pointer '>
-                       <MailIcon className='size-5'/>
-                        <p>deisahomes@gmail.com</p>
+        <section className='min-h-screen h-auto bg-black text-[white] p-6
+        grid grid-cols-1 items-center justify-center
+        gap-y-6 '>
+            {/* footer intro div */}
+            <div className='grid grid-cols-1 gap-y-8 items-start
+            justify-center md:grid-cols-4 gap-x-6'>
+                {/* perspective div */}
+                <div className='md:col-span-2'>
+                    <p className='font-lavish font-thin tracking-[.18rem] py-3
+                    text-[38px] text-[burlywood] '
+                    >perspective in motion</p>
+                    <h4 className='font-zen py-3 text-[19px] tracking-widest
+                    md:pr-[10rem] '>
+                        Refusing the generic in architectural spaces.
+                    </h4>
+                </div>
+                {/* sections div */}
+                <div className='md:pt-16'>
+                    {/* section title */}
+                    <h4 className='text-[12px] font-thin font-mono tracking-[.2rem]
+                    uppercase text-white/30 py-3 '>sections</h4>
+                    <div className='flex items-start justify-center flex-col
+                    gap-y-2 '>
+                        {/* philosophy */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >philosophy</a>
+                        {/* methods */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >methods</a>
+                        {/* selected works */}
+                        <a href="#"className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >selected works</a>
+                        {/* consultation */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >consultation</a>
                     </div>
-                    {/* phone */}
-                    <div className='flex items-center gap-x-2 py-2 cursor-pointer '>
-                        <PhoneCall className='size-5'/>
-                        <p>+255 766 355 608</p>
+                </div>
+                {/* channels div */}
+                <div className='md:pt-16'>
+                    {/* channels title */}
+                    <h4 className='text-[12px] font-thin font-mono tracking-[.2rem]
+                    uppercase text-white/30 py-3 '>channels</h4>
+                    <div className='flex items-start justify-center flex-col
+                    gap-y-2 '>
+                        {/* instagram */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >instagram</a>
+                        {/* youtube */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >youtube</a>
+                        {/* whatsapp */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >whatsapp</a>
+                        {/* tiktok */}
+                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
+                        >tiktok</a>
                     </div>
                 </div>
             </div>
-            {/* the deisa homes div */}
-            <div className='h-56 pt-24'>
-                <h1 className='text-center text-[4rem] font-zen tracking-widest
-                leading-[4.5rem] text-white md:text-[8rem] md:leading-[6rem] embossed-text '>
-                    <span className='inline-block'>deisa</span>
-                    <span className='inline-block'>&nbsp;homes</span>
-                </h1>
+            {/* huge deisa div */}
+            <div className='h-[20rem] w-full border-b border-white/30'>
+                {/* in smaller screens */}
+                <p className='text-[burlywood] font-zen tracking-[.3rem]
+                md:hidden pt-20 text-center text-[3.5rem] font-black '
+                >
+                    <span>deisa</span> <br />
+                    <span className='bg-clip-text bg-gradient-to-t from-transparent
+                    to-white/40 text-transparent saturate-200 '
+                    >&nbsp;homes</span>
+                </p>
+                {/* in medium to larger screens */}
+                <p className='text-center font-zen font-black text-[9rem]
+                pt-20 tracking-[.6rem] cursor-pointer hidden md:block '>deisa homes</p>
             </div>
+            {/*copyright div  */}
+            <div>
+                <p className='text-white/30  text-center py-3 font-mono'
+                > &copy;2026 - deisa homes. All rights reserved </p>
+            </div>
+            
         </section>
 
     </div>
