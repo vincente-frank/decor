@@ -25,7 +25,6 @@ const Home = () => {
                         trigger: panel,
                         start: "top 80%",
                         end: "+=500",
-                        markers: true,
                         scrub:1,
                         toggleActions: "play complete restart reverse"
                     }
