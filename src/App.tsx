@@ -1,9 +1,17 @@
 import { useLayoutEffect, useState } from 'react'
 import './App.css'
-import Home from './components/home'
 import SplashScreen from './components/splashscree'
 import imagePreload from './components/imagePreload'
 import { imagePathArray } from './utils/imageArray'
+import Hero from './components/hero'
+import Design from './components/design'
+import Elevation from './components/elevation'
+import About from './components/about'
+import Furniture from './components/furniture'
+import Projects from './components/projects'
+import Thrilled from './components/thrilled'
+import Contacts from './components/contacts'
+import Footer from './components/footer'
 
 
 const App = () => {
@@ -15,14 +23,22 @@ const App = () => {
     })
   }, [])
 
-  if(loading) {
-    return <SplashScreen/>
-  }
+  // if(loading) {
+  //   return <SplashScreen/>
+  // }
 
   return (
 
     <div>
-      <Home/>
+      <Hero/>
+      <Design/>
+      <Elevation/>
+      <About/>
+      <Furniture/>
+      <Projects/>
+      <Thrilled/>
+      <Contacts/>
+      <Footer/>
     </div>
 
   )
