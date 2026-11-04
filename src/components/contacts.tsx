@@ -1,4 +1,4 @@
-import { MailIcon, PhoneCall } from 'lucide-react'
+import { LocateIcon, MailIcon, MapPin, PhoneCall } from 'lucide-react'
 
 
 import React from 'react'
@@ -10,7 +10,7 @@ const Contacts = () => {
     <div>
         {/* contact form section */}
         <section id = "contacts"
-        className='bg-[url("/driven.webp")] bg-cover bg-center panel
+        className='bg-[url("/deisa4.webp")] bg-cover bg-center panel
         min-h-screen h-auto px-6 pt-6 pb-32 relative' >
             <div className='absolute inset-0 bg-gradient-to-b from-black
             via-transparent to-black/80 backdrop-blur-3xl '></div>
@@ -20,7 +20,7 @@ const Contacts = () => {
                 <div>
                     <p className="font-zen tracking-widest font-black
                     py-3 md:text-xl/8 capitalize child "
-                    > [04 / contact] </p>
+                    > [06 / contact] </p>
                     <h1 className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
                     tracking-[.2rem] bg-clip-text saturate-200 text-transparent
                     bg-gradient-to-t from-[burlywood] to-white/90 text-[24px]
@@ -35,17 +35,23 @@ const Contacts = () => {
                         a historical apartment, reach out to start the
                         architectural dialogue.
                     </p>
+                    {/* location */}
+                    <div className='flex items-center justify-start gap-x-2 py-2
+                    px-2 py-1 '>
+                        <MapPin className='size-4 text-[burlywood] '/>
+                        <p>CCM njia panda ya VETA</p>
+                    </div>
                     {/* email */}
                     <div className='flex items-center justify-start gap-x-2 py-2
-                    px-2 py-1 child '>
-                        <MailIcon className='size-4'/>
+                    px-2 py-1 '>
+                        <MailIcon className='size-4 text-[burlywood]'/>
                         <p>hello@deisahomes.com</p>
                     </div>
                     {/* phone number */}
                     <div className='flex items-center justify-start gap-x-2 py-2
-                    child'>
-                        <PhoneCall className='size-4'/>
-                        <p>+255 766 355 608</p>
+                    px-2'>
+                        <PhoneCall className='size-4 text-[burlywood]'/>
+                        <p>+255 764 034 701</p>
                     </div>
                 </div>
                 {/* send message form */}

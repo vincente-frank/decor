@@ -8,17 +8,18 @@ const Furniture = () => {
 
     <div>
         {/* furniture section */}
-        <section className='bg-[url("/driven.webp")] min-h-screen h-auto
+        <section id='furniture'
+        className='bg-[url("/deisa5.webp")] min-h-screen h-auto
         bg-cover bg-center bg-fixed relative panel '>
             {/* the overlay */}
             <div className='absolute inset-0 bg-gradient-to-b from-white
-            via-white/30 to-black '></div>
+            via-black/60 to-black '></div>
             {/* the content */}
             <div className='relative pt-42 flex flex-col items-center justify-center
             gap-y-12 md:pt-56 '>
-                <p className='font-lavish text-[3rem] leading-[4.4rem] md:text-[4rem]
+                <p className='font-kalam text-[2.4rem] leading-[3.6rem] md:text-[5rem]
                 tracking-widest text-center text-[burlywood] saturate-200
-                font-black child '>
+                font-black md:leading-[5.7rem] '>
                     <span>Need</span>
                     <span>&nbsp;help</span> <br />
                     <span>finding</span>

@@ -8,10 +8,11 @@ const Thrilled = () => {
 
     <div>
         {/* thrilled to help you section */}
-        <section className='min-h-screen h-auto bg-[url("/morph-bg.webp")] bg-cover
+        <section id='thrilled'
+        className='min-h-screen h-auto bg-[url("/deisa21.webp")] bg-cover
         bg-center relative p-6 panel '>
             <div className='absolute inset-0  bg-gradient-to-b
-            from-black via-black/30 to-black'></div>
+            from-black via-black/40 to-black'></div>
             <div className='h-auto relative text-white text-center py-6 h-96'>
                 <p className='font-mono tracking-[.3rem] uppercase text-[burlywood]
                 py-6 child '

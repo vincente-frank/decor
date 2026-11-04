@@ -12,6 +12,8 @@ import Projects from './components/projects'
 import Thrilled from './components/thrilled'
 import Contacts from './components/contacts'
 import Footer from './components/footer'
+import FAQ from './components/faq'
+import Services from './components/services'
 
 
 const App = () => {
@@ -34,8 +36,10 @@ const App = () => {
       <Design/>
       <Elevation/>
       <About/>
+      <Services/>
       <Furniture/>
       <Projects/>
+      <FAQ/>
       <Thrilled/>
       <Contacts/>
       <Footer/>

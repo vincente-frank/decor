@@ -9,10 +9,11 @@ const Elevation = () => {
 
     <div>
         {/* elevation section */}
-        <section className='min-h-screen h-auto p-6 panel '>
+        <section id='elevation'
+        className='min-h-screen h-auto p-6 panel '>
             {/* container div */}
             <div className='relative bg-[url("/deisa3.webp")] bg-cover h-[35rem]
-            bg-center rounded-[1rem] md:h-screen '>
+            bg-center rounded-[1rem] md:h-screen md:bg-[url("/bedroom.webp")] '>
                 {/* the overlay */}
                 <div className='absolute inset-0 bg-gradient-to-t from-black child
                 to-transparent rounded-[1rem] border border-2 border-white/40'></div>

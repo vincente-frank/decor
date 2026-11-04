@@ -3,13 +3,26 @@
 @import "tailwindcss";
 
 
-
+/* load font from assets folder */
+@font-face {
+  font-family: 'Kalam-Variable';
+  src: url('./assets/fonts/Kalam-Variable.woff2');
+  font-weight: 100 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 /* me custom fonts */
 @theme{
   --font-lavish:"Lavishly Yours", san-serif;
   --font-zen:"Zen Dots", san-serif;
   --font-italiano:"Italianno", san-serif;
+  --font-kalam: "Kalam Variable", san-serif;
+}
+
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 .embossed-text {

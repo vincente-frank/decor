@@ -8,7 +8,8 @@ const Footer = () => {
 
     <div>
         {/* footer section */}
-        <section className='min-h-screen h-auto bg-black text-[white] p-6
+        <section id='footer'
+        className='min-h-screen h-auto bg-black text-[white] p-6
         grid grid-cols-1 items-center justify-center
         gap-y-6 '>
             {/* footer intro div */}
@@ -27,44 +28,30 @@ const Footer = () => {
                 {/* sections div */}
                 <div className='md:pt-16'>
                     {/* section title */}
-                    <h4 className='text-[12px] font-thin font-mono tracking-[.2rem]
-                    uppercase text-white/30 py-3 '>sections</h4>
-                    <div className='flex items-start justify-center flex-col
-                    gap-y-2 '>
-                        {/* philosophy */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >philosophy</a>
-                        {/* methods */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >methods</a>
-                        {/* selected works */}
-                        <a href="#"className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >selected works</a>
-                        {/* consultation */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >consultation</a>
-                    </div>
+                    <h4 className='text-[16px] font-thin font-mono tracking-[.05rem]
+                    uppercase text-white py-3 '>sections</h4>
+                        <nav className='flex items-start justify-start flex-col
+                        gap-y-2 capitalize text-white/60 '>
+                            <a href="#">home</a>
+                            <a href="#">our philosophy</a>
+                            <a href="#">our pillars</a>
+                            <a href="#">our services</a>
+                            <a href="#">portfolio</a>
+                            <a href="#">faq</a>
+                            <a href="#">contacts</a>
+                        </nav>
                 </div>
                 {/* channels div */}
                 <div className='md:pt-16'>
                     {/* channels title */}
-                    <h4 className='text-[12px] font-thin font-mono tracking-[.2rem]
-                    uppercase text-white/30 py-3 '>channels</h4>
-                    <div className='flex items-start justify-center flex-col
-                    gap-y-2 '>
-                        {/* instagram */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >instagram</a>
-                        {/* youtube */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >youtube</a>
-                        {/* whatsapp */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >whatsapp</a>
-                        {/* tiktok */}
-                        <a href="#" className='font-mono tracking-wide uppercase text-[wheat]/30 '
-                        >tiktok</a>
-                    </div>
+                    <h4 className='text-[16px] font-thin font-mono tracking-[.05rem]
+                    uppercase text-white py-3 '>channels</h4>
+                        <nav className='flex items-start justify-start flex-col
+                        gap-y-2 capitalize text-white/60 '>
+                            <a href="#">instagram</a>
+                            <a href="#">whatsApp</a>
+                            <a href="#">TikTok</a>
+                        </nav>
                 </div>
             </div>
             {/* huge deisa div */}

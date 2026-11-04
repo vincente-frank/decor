@@ -9,12 +9,13 @@ const Projects = () => {
 
     <div>
         {/* selected works section */}
-        <section className='min-h-screen h-auto px-6 bg-black text-white
+        <section id='projects'
+        className='min-h-screen h-auto px-6 bg-black text-white
         pt-6 pb-12 panel '>
             {/* headings */}
             <p className="font-zen tracking-widest font-black
             py-3 md:text-xl/8 capitalize child "
-            > [03 / portfolio ] </p>
+            > [04 / portfolio ] </p>
             <h1 className='font-zen uppercase md:text-[2rem] py-4 md:leading-[3rem]
             tracking-[.2rem] bg-clip-text saturate-200 text-transparent
             bg-gradient-to-t from-[burlywood] to-white/90 text-[24px]
@@ -27,7 +28,7 @@ const Projects = () => {
             <div className='pt-12 grid grid-cols-1 items-center
             justify-center md:grid-cols-3 gap-6 child '>
                 {/* living */}
-                <div className='h-[30rem] bg-[url("/living.webp")] rounded-[1rem]
+                <div className='h-[30rem] bg-[url("/deisa8.webp")] rounded-[1rem]
                 bg-cover bg-center relative md:col-span-2 cursor-pointer child'>
                     {/* overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/80
@@ -42,7 +43,7 @@ const Projects = () => {
                     </div>
                 </div>
                 {/* bedroom */}
-                <div className='h-[30rem] bg-[url("/bedroom.webp")] rounded-[1rem]
+                <div className='h-[30rem] bg-[url("/deisa4.webp")] rounded-[1rem]
                 bg-cover bg-center relative cursor-pointer child '>
                     {/* overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/80
@@ -57,7 +58,7 @@ const Projects = () => {
                     </div>
                 </div>
                 {/* kitchen */}
-                <div className='h-[30rem] bg-[url("/kitchen.webp")] rounded-[1rem]
+                <div className='h-[30rem] bg-[url("/deisa7.webp")] rounded-[1rem]
                 bg-cover bg-center relative cursor-pointer child '>
                     {/* overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/80
@@ -72,7 +73,7 @@ const Projects = () => {
                     </div>
                 </div>
                 {/* hero */}
-                <div className='h-[30rem] bg-[url("/hero.webp")] rounded-[1rem]
+                <div className='h-[30rem] bg-[url("/deisa11.webp")] rounded-[1rem]
                 bg-cover bg-center relative cursor-pointer child '>
                     {/* overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/80
@@ -87,7 +88,7 @@ const Projects = () => {
                     </div>
                 </div>
                 {/* driven */}
-                <div className='h-[30rem] bg-[url("/driven.webp")] rounded-[1rem]
+                <div className='h-[30rem] bg-[url("/deisa17.webp")] rounded-[1rem]
                 bg-cover bg-center relative cursor-pointer child '>
                     {/* overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/80

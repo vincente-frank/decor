@@ -13,7 +13,8 @@ const About = () => {
 
     <div>
         {/* about us section */}
-        <section className=' p-6 min-h-screen h-auto bg-white about-us
+        <section id="about"
+        className=' p-6 min-h-screen h-auto bg-white about-us
         panel '>
             {/* the heading */}
             <p className="font-zen tracking-widest font-black

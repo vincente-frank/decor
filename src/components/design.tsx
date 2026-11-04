@@ -8,7 +8,8 @@ const Design = () => {
 
     <div>
         {/* good design section */}
-        <section className="min-h-screen h-auto p-6 bg-white flex panel 
+        <section id='design'
+        className="min-h-screen h-auto p-6 bg-white flex panel 
         flex-col items-start justify-center gap-y-8 md:flex-row md:justify-between ">
             {/* the philosophy */}
             <div className='w-full md:w-[40%] pt-16 child '>
