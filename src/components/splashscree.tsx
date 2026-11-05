@@ -31,8 +31,7 @@ const SplashScreen = () => {
 
     <div>
         <section className='flex items-center justify-center
-        gap-y-1 flex-col h-screen bg-gradient-to-t from-black
-        via-black/80 to-black/20'
+        gap-y-1 flex-col h-screen bg-black'
         >
             <SofaIcon className='text-[burlywood] saturate-200
             size-12 sofa '
